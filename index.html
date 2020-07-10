@@ -4,35 +4,7 @@
     <title>Converter</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script>
-        // const inputField = document.getElementById('inputField');
-        const convertButton = document.getElementById('convert');
-        const outputField = document.getElementById('display');
-
-        function convertInt() {
-            let inputValue = document.getElementById('inputField').value;
-            let result = "";
-            const intArray = [5000, 4000, 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
-            const romanArray = ['V&#773;', 'MV&#773;', 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
-
-            if (inputValue > 0) {
-                for (let i = 0; i < intArray.length; i++) {
-                    while (intArray[i] <= inputValue) {
-                        result += romanArray[i]
-                        inputValue -= intArray[i]
-                    }
-                }
-                console.log(result);
-                document.getElementById('display').innerHTML = "Result : " + result;
-            } else if (inputValue == 0) {
-                document.getElementById('display').innerHTML = "Result : nulla";                
-            } else {
-                document.getElementById('display').innerHTML = "Error : enter valid input";
-            }
-
-        }
-
-    </script>
+    <script src="app.js"></script>
 </head>
 
 <body>
