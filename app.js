@@ -11,7 +11,7 @@ function convertInt() {
                 inputValue -= intArray[i]
             }
         }
-        console.log(result);
+        // console.log(result);
         document.getElementById('display').innerHTML = "Result : " + result;
     } else if (inputValue == 0) {
         document.getElementById('display').innerHTML = "Result : nulla";

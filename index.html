@@ -10,10 +10,10 @@
 <body>
     <div class="box">
         <h2>Roman Numeral Converter</h2>
-        <p>Enter a non negative integer. Then click Convert to view a Roman numeral equivalent.</p>
+        <p>Enter a non negative integer to view a Roman numeral equivalent.</p>
         <div class="form-control">
-            <input id="inputField" type="number" class="input" placeholder="Enter an integer" />
-            <button class="btn" id="convert" onclick='convertInt()'>Convert</button>
+            <input id="inputField" type="number" class="input" placeholder="Enter an integer" oninput="convertInt()"/>
+            <!-- <button class="btn" id="convert" onclick='convertInt()'>Convert</button> -->
         </div>
         <p id="display"></p>
     </div>
