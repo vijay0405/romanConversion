@@ -4,6 +4,31 @@
     <title>Converter</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        // const inputField = document.getElementById('inputField');
+        const convertButton = document.getElementById('convert');
+        const outputField = document.getElementById('display');
+
+        function convertInt() {
+            let inputValue = document.getElementById('inputField').value;
+            let result = "";
+            const intArray = [5000, 4000, 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+            const romanArray = ['V&#773;', 'MV&#773;', 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+
+            if (inputValue > 0) {
+                for (let i = 0; i < intArray.length; i++) {
+                    while (intArray[i] <= inputValue) {
+                        result += romanArray[i]
+                        inputValue -= intArray[i]
+                    }
+                }
+                console.log(result);
+                document.getElementById('display').innerHTML = "Result : " + result;
+            }
+
+        }
+
+    </script>
 </head>
 
 <body>
@@ -11,9 +36,10 @@
         <h2>Roman Numeral Converter</h2>
         <p>Enter a non negative integer. Then click Convert to view a Roman numeral equivalent.</p>
         <div class="form-control">
-            <input type="number" class="input" placeholder="Enter an integer" />
-            <button class="btn">Convert</button>
+            <input id="inputField" type="number" class="input" placeholder="Enter an integer" />
+            <button class="btn" id="convert" onclick='convertInt()'>Convert</button>
         </div>
+        <p id="display"></p>
     </div>
 
 </body>
