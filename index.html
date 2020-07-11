@@ -12,10 +12,17 @@
         <h2>Roman Numeral Converter</h2>
         <p>Enter a non negative integer to view a Roman numeral equivalent.</p>
         <div class="form-control">
-            <input id="inputField" type="number" class="input" placeholder="Enter an integer" oninput="convertInt()"/>
+            <input id="inputField" type="number" min="0" class="input" placeholder="Enter an integer" oninput="convertInt()"/>
             <!-- <button class="btn" id="convert" onclick='convertInt()'>Convert</button> -->
         </div>
         <p id="display"></p>
+
+        <div>
+            <p>Examples: </p>
+            <p>5000, 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1</p>
+            <p>V&#773, M, CM, D, CD, C, XC, L, XL, X, IX, V, IV, I</p>
+        </div>
+
     </div>
 
 </body>
