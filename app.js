@@ -1,3 +1,22 @@
+
+function generateRandomColor(num) {
+    var arr = [];
+    for (var i = 0; i < num; i++) {
+        arr.push(randomColors());
+    }
+
+    return arr;
+}
+
+function randomColors() {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    return "rgb(" + r + ", " + g + ", " + b + ")";
+}
+
+
+
 function convertInt() {
     let inputValue = document.getElementById('inputField').value;
     let result = "";
@@ -19,4 +38,7 @@ function convertInt() {
         document.getElementById('display').innerHTML = "Error : enter valid input";
     }
 
+    let colors = generateRandomColor(50);
+    document.getElementById('main-body').style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    
 }
