@@ -17,6 +17,10 @@ body {
     max-width: 500px;
 }
 
+#display {
+    word-wrap: break-word;
+}
+
 .box h2 {
     margin: 12px 0 0;
 }
